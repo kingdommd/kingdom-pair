@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pair with Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+    video#bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: contain; /* ডেস্কটপের জন্য */
+    }
+
+    /* মোবাইল ডিভাইসের জন্য স্টাইল */
+    @media (max-width:10000px) {
+      video#bg-video {
+        object-fit: contain; /* মোবাইলের জন্য */
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .box {
+      width: 320px;
+      padding: 25px;
+      text-align: center;
+      background: linear-gradient(145deg, #fff0f5, #ffe4e1);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+    }
+
+    #text {
+      color: #6b1e63;
+    }
+
+    .centered-text {
+      color: #6b1e63;
+    }
+
+    .input-container {
+      display: flex;
+      background: linear-gradient(135deg, #fff, #f9c5d1);
+      border-radius: 1rem;
+      box-shadow: 10px 10px 30px rgba(255, 182, 193, 0.3);
+      padding: 0.3rem;
+      gap: 0.3rem;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .input-container input {
+      border-radius: 0.8rem 0 0 0.8rem;
+      background: #ffeef0;
+      border: none;
+      padding: 1rem;
+      flex-basis: 75%;
+      font-size: 1rem;
+      color: #c71585;
+    }
+
+    .input-container input:focus {
+      outline: none;
+      box-shadow: inset 0 0 10px #ffb6c1;
+    }
+
+    .input-container button {
+      flex-basis: 25%;
+      background: linear-gradient(135deg, #ff8da5, #ff3c72);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 0 1rem 1rem 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .input-container button:hover {
+      background: linear-gradient(135deg, #ff5e7a, #ff2a5c);
+    }
+
+    #copy {
+      cursor: pointer;
+      color: #ff1493;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .box {
+        width: 90%;
+      }
+
+      .input-container {
+        flex-direction: column;
+      }
+
+      .input-container input, .input-container button {
+        border-radius: 0.8rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="https://files.catbox.moe/78zfu0.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="container">
+    <div class="box" id="box">
+      <div id="text">
+        <i class="fa fa-heart fa-2x"></i>
+        <h3 class="centered-text">RAHEEM-XMD-2</h3>
+        <h6>Enter your number with country code</h6>
+        <div class="input-container">
+          <input placeholder="917000000000" type="number" id="number">
+          <button id="submit">Submit</button>
+        </div>
+        <a id="waiting-message" class="centered-text" style="display: none;">Please wait for some time</a>
+        <br><br>
+        <main id="pair"></main>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+  <script>
+    let a = document.getElementById("pair");
+    let b = document.getElementById("submit");
+    let c = document.getElementById("number");
+
+    async function Copy() {
+  let text = document.getElementById("copy").innerText;
+  let obj = document.getElementById("copy");
+  let code = obj.querySelector('span').innerText; // <span> ট্যাগের ভেতরের টেক্সটটা বের করা হলো
+  await navigator.clipboard.writeText(code); // শুধু কোডটা কপি করা হলো
+  obj.innerText = "COPIED";
+  obj.style = "color:green;font-weight:bold";
+  setTimeout(() => {
+    obj.innerText = text;
+    obj.style = "color:#ff1493;font-weight:bold";
+  }, 500);
+    }
+
+    b.addEventListener("click", async (e) => {
+      e.preventDefault();
+      if (!c.value) {
+        a.innerHTML = '<a style="color:#800000;font-weight:bold">Enter your WhatsApp number with country code</a><br><br>';
+      } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
+9190888      } else {
+        const bc = c.value.replace(/[^0-9]/g, "");
+        let bb = "";
+        let bbc = "";
+        const cc = bc.split('');
+        cc.map(a => {
+          bbc += a;
+          if (bbc.length == 3 || bbc.length == 8) {
+            bb += " " + a;
+          } else {
+            bb += a;
+          }
+        });
+        c.type = "text";
+        c.value = "+" + bb;
+        c.style = "color:#c71585;font-size:20px";
+        a.innerHTML = '<a style="color:#ff1493;font-weight:bold">Please wait for some time</a><br><br>';
+        let { data } = await axios(`/code?number=${bc}`);
+        let code = data.code || "Service Unavailable";
+        a.innerHTML = '<font id="copy" onclick="Copy()"> tap to copy: <span>' + code + '</span></font><br><br><br>';
+      }
+    });
+  </script>
+</body>
+</html>
+
