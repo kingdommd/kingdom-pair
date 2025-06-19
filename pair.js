@@ -17,7 +17,7 @@ https://chat.whatsapp.com/Jp08rEdDmao1CvCOLH2KTT
 🪂github.com/Raheem-cm/RAHEEM-XMD-2 .git
 ━━━━━━━━━━━━━━━━━━━━━━
 🚀 Deploy Your Royal Bot Now
-👑 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲: 𝐋𝐨𝐯𝐞𝐥𝐲-𝐁𝐨𝐲.𝐱.𝐒𝐮𝐦𝐨𝐧
+👑 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲: legend boy raheem
 🍉 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲: RAHEEM-XMD-2 𝐈𝐧𝐭𝐞𝐥 𝐂𝐨𝐫𝐞™
 ✨ Deploy & Rule Like a True Legend
 ━━━━━━━━━━━━━━━━━━━━━━
