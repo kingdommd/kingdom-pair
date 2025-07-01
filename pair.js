@@ -13,7 +13,7 @@ const MESSAGE = process.env.MESSAGE || `
 https://chat.whatsapp.com/FkBWBV2dsfFBoBSC61Sb7i
 ━━━━━━━━━━━━━━━━━━━━━━
 📦 GitHub Repo — Star It For Power Boost!
-✴️ RAHEEM-XMD-2 GitHub:
+✴️ KINGDOM-MD GitHub:
 🪂 https://github.com/kingdommd/kingdom-md.git
 ━━━━━━━━━━━━━━━━━━━━━━
 🚀 Deploy Your Royal Bot Now
