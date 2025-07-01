@@ -4,21 +4,21 @@ let router = express.Router();
 const pino = require("pino");
 const { Boom } = require("@hapi/boom");
 const MESSAGE = process.env.MESSAGE || `
-🔥 RAHEEM-XMD-2 | 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝 ✅
+🔥 KINGDOM-MD | 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝 ✅
 🔥 Your Bot is Now Alive, Royal & Ready to Rock! 🔥
 ━━━━━━━━━━━━━━━━━━━━━━
 🟢 Session pair code Successfully ✅
 🔗 Connect for Instant Support & Royal Help:
 📌 WhatsApp Group:
-https://chat.whatsapp.com/Jp08rEdDmao1CvCOLH2KTT
+https://chat.whatsapp.com/FkBWBV2dsfFBoBSC61Sb7i
 ━━━━━━━━━━━━━━━━━━━━━━
 📦 GitHub Repo — Star It For Power Boost!
 ✴️ RAHEEM-XMD-2 GitHub:
-🪂github.com/Raheem-cm/RAHEEM-XMD-2 .git
+🪂 https://github.com/kingdommd/kingdom-md.git
 ━━━━━━━━━━━━━━━━━━━━━━
 🚀 Deploy Your Royal Bot Now
-👑 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲: legend boy raheem
-🍉 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲: RAHEEM-XMD-2 𝐈𝐧𝐭𝐞𝐥 𝐂𝐨𝐫𝐞™
+👑 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲: legend kingdom 
+🍉 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲: KINGDOM-MD 𝐈𝐧𝐭𝐞𝐥 𝐂𝐨𝐫𝐞™
 ✨ Deploy & Rule Like a True Legend
 ━━━━━━━━━━━━━━━━━━━━━━
 📝 Royal Quote of the Bot:
@@ -26,7 +26,7 @@ https://chat.whatsapp.com/Jp08rEdDmao1CvCOLH2KTT
 > “𝐁𝐨𝐭 𝐁𝐲 𝐍𝐚𝐦𝐞, 𝐋𝐞𝐠𝐞𝐧𝐝 𝐁𝐲 𝐅𝐚𝐦𝐞”
 — Royalty Runs in the Code
 ━━━━━━━━━━━━━━━━━━━━━━
-🦾 RAHEEM-XMD-2 || Raheem-cm || 𝐑𝐨𝐲𝐚𝐥𝐁𝐨𝐭
+🦾 KINGDOM-MD || kingdom-md || 𝐑𝐨𝐲𝐚𝐥𝐁𝐨𝐭
 `;
 
 const { upload } = require('./mega');
